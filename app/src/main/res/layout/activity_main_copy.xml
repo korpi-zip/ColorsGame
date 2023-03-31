@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:layout_weight="0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lblProposedColor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:background="#6699CC"
+        android:gravity="center"
+        android:text="@string/Proposed_color"
+        app:layout_constraintBottom_toTopOf="@+id/sbrRed2"
+        app:layout_constraintEnd_toStartOf="@id/lblTargetColor2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lblTargetColor2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_weight="1"
+        android:background="#777"
+        android:gravity="center"
+        android:text="@string/Target_color"
+        app:layout_constraintBottom_toTopOf="@+id/sbrRed2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lblProposedColor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblRedValue2"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:gravity="center|end"
+        android:text="102"
+        app:layout_constraintBottom_toTopOf="@+id/lblGreenValue2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sbrRed2" />
+
+    <SeekBar
+        android:id="@+id/sbrRed2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:max="225"
+        android:progress="102"
+        android:progressTint="#B00"
+        android:thumbTint="#B00"
+        app:layout_constraintBottom_toTopOf="@+id/sbrGreen2"
+        app:layout_constraintEnd_toStartOf="@+id/lblRedValue2"
+        app:layout_constraintStart_toEndOf="@+id/lblRedTitle2" />
+
+    <TextView
+        android:id="@+id/lblRedTitle2"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"
+        android:gravity="center|start"
+        android:text="@string/Red"
+        app:layout_constraintBottom_toTopOf="@+id/lblGreenTitle2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblGreenTitle2"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"
+        android:gravity="center|start"
+        android:text="@string/Green"
+        app:layout_constraintBottom_toTopOf="@+id/lblBlueTitle2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/sbrGreen2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:max="255"
+        android:progress="153"
+        android:progressTint="#0B0"
+        android:thumbTint="#0B0"
+        app:layout_constraintBottom_toTopOf="@id/sbrBlue2"
+        app:layout_constraintEnd_toStartOf="@+id/lblGreenValue2"
+        app:layout_constraintStart_toEndOf="@+id/lblGreenTitle2" />
+
+    <TextView
+        android:id="@+id/lblGreenValue2"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"
+        android:gravity="center|end"
+        android:text="153"
+        app:layout_constraintBottom_toTopOf="@+id/lblBlueValue2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/lblBlueValue2"
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center|end"
+        android:text="204"
+        app:layout_constraintBottom_toTopOf="@+id/btnGetScore2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sbrBlue2" />
+
+    <SeekBar
+        android:id="@+id/sbrBlue2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:max="255"
+        android:progress="204"
+        android:progressTint="#00B"
+        android:thumbTint="#00B"
+        app:layout_constraintBottom_toTopOf="@+id/btnGetScore2"
+        app:layout_constraintEnd_toStartOf="@id/lblBlueValue2"
+        app:layout_constraintStart_toEndOf="@+id/lblBlueTitle2" />
+
+    <TextView
+        android:id="@+id/lblBlueTitle2"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"
+        android:gravity="center|start"
+        android:text="@string/Blue"
+        app:layout_constraintBottom_toTopOf="@+id/btnGetScore2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnNewColor2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:text="@string/New"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/btnGetScore2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:text="@string/Score"
+        app:layout_constraintBottom_toTopOf="@+id/btnNewColor2"
+        tools:layout_editor_absoluteX="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
